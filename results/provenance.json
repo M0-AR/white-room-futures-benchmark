@@ -1,0 +1,19 @@
+{
+  "provenance": {
+    "ES=F_D": "live_yahoo",
+    "NQ=F_D": "live_yahoo",
+    "SPY_D": "live_yahoo",
+    "QQQ_D": "live_yahoo",
+    "ES=F_H": "live_yahoo",
+    "NQ=F_H": "live_yahoo",
+    "SPY_H": "live_yahoo",
+    "QQQ_H": "live_yahoo"
+  },
+  "hypotheses": {
+    "hypotheses": {
+      "H1_do_nothing_beats_overtrade_in_chop": "compare turnover vs sharpe; B/C should beat A net of costs in chop",
+      "H2_tight_stops_chopped": "bracket variant (see tests) underperforms in ADX<20",
+      "H3_regime_filter_rescues_MR": "C_imry_regime WFE > B_andrea_fade WFE"
+    }
+  }
+}

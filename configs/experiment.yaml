@@ -1,0 +1,11 @@
+data:
+  symbols: ["ES=F", "NQ=F", "SPY", "QQQ"]
+  period_daily: "5y"
+  period_intraday: "60d"
+  intraday_interval: "60m"
+  cache_dir: "results/data"
+experiment:
+  seed: 42
+  outdir: "results"
+  run_walkforward: true
+  run_regime_study: true

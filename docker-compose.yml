@@ -1,0 +1,16 @@
+services:
+  research:
+    build: .
+    volumes:
+      - ./results:/app/results
+      - ./configs:/app/configs
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=UTC
+    command: python -m src.run_all --config configs/experiment.yaml
+
+  test:
+    build: .
+    volumes:
+      - .:/app
+    command: pytest -q

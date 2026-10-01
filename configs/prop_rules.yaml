@@ -1,0 +1,26 @@
+# Prop-firm envelope (static 5% MDD + 5% firm daily cap + 3% personal stop)
+# Sources: websearch consensus 2026 (ForTraders, Apex EOD, Bullfy, RevOne):
+# 0.25-0.5% risk/trade, static MDD survivable for scalps, EOD-trailing variant noted.
+account:
+  start_equity: 100000.0
+  static_max_drawdown_pct: 5.0      # floor = 95000 fixed
+  firm_daily_loss_pct: 5.0
+  personal_daily_stop_pct: 3.0
+  risk_per_trade_pct: 0.25          # 0.25% baseline; 0.5% outer edge
+  max_trades_per_day: 8
+  consistency_max_best_day_pct: 50.0
+
+costs:
+  # Futures-realistic; ETF proxy uses bps side.
+  commission_rt_per_contract: 4.0
+  slippage_ticks_per_side: 1
+  es_tick_value: 12.50
+  nq_tick_value: 5.00
+  etf_slippage_bps_per_side: 1.0
+
+walkforward:
+  in_sample_ratio: 0.70
+  n_splits: 5
+  min_trades_for_significance: 100
+  wfe_accept: 0.50
+  wfe_excellent: 0.70
